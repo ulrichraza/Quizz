@@ -1,0 +1,68 @@
+{
+  "name": "quizz",
+  "description": "Quizz app from footballdatabase",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Radolalaina Jacky",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
+  },
+  "dependencies": {
+    "@material-tailwind/react": "2.1.4",
+    "@nextui-org/react": "2.2.9",
+    "@react-stately/data": "3.11.0",
+    "@uidotdev/usehooks": "2.4.1",
+    "@vercel/analytics": "1.1.1",
+    "framer-motion": "10.16.5",
+    "lodash": "4.17.21",
+    "next": "13.5.4",
+    "primereact": "10.0.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.11.0",
+    "react-query": "3.39.3",
+    "react-responsive-carousel": "3.2.23",
+    "sharp": "0.32.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.2",
+    "@commitlint/config-conventional": "17.7.0",
+    "@types/lodash": "4.14.201",
+    "@types/node": "18.18.4",
+    "@types/react": "18.2.25",
+    "@types/react-dom": "18.2.11",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
+    "autoprefixer": "10.4.16",
+    "eslint": "8.51.0",
+    "eslint-config-next": "13.5.4",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.28.1",
+    "eslint-plugin-prettier": "5.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "postcss": "8.4.31",
+    "prettier": "3.0.3",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
+  },
+  "license": "Apache-2.0"
+}
