@@ -91,20 +91,20 @@ export default function QuizzProvider({
       const [_, level, clubId, competitionID] = queryKey;
       const params = {
         question_type:
-           'who_is_this_player_by_records,who_is_this_club,who_is_this_club_type,who_is_this_player,who_is_this_player_by_palmares,who_is_this_player_by_photos,who_is_this_player_by_teammate,who_is_this_club_by_logo',
-         // 'who_is_this_club',
+           'who_is_this_player_by_nationality,who_is_this_player_by_records,who_is_this_club,who_is_this_club_type,who_is_this_player,who_is_this_player_by_palmares,who_is_this_player_by_photos,who_is_this_player_by_teammate,who_is_this_club_by_logo',
+         // Ajout 'who_is_this_player_by_nationality',
         limit: 1,
         is_web: true,
         page: level,
         // times: Date.now(),
         club_id: clubId,
-        competitition_id: competitionID,
+        competition_id: competitionID,
       };
       const beginTimer = Date.now()
       const data = await fetch(
         `${
           process.env.NEXT_PUBLIC_API_BACKEND_HOST
-        }/api/v1/quizz?${stringifySearchParams({ params })}`,
+        }/api/quizz?${stringifySearchParams({ params })}`,
         {
           cache: 'no-cache',
           headers: {

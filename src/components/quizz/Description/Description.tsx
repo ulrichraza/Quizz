@@ -8,6 +8,7 @@ import QuizzClubByLogo from './QuizzClubByLogo';
 import QuizzClubPalmares from './QuizzClubPalmares';
 import QuizzClubType from './QuizzClubType';
 import QuizzPlayerByRecords from './QuizzPlayerByRecords';
+import QuizzPlayerByNationality from './QuizzPlayerByNationality';
 /* eslint-disable */
 const QuestionDescrition: any = {
   who_is_this_player_by_teammate: <QuizzPlayerTeammate />,
@@ -19,6 +20,7 @@ const QuestionDescrition: any = {
   who_is_this_club_by_palmares: <QuizzClubPalmares />,
   who_is_this_club_type: <QuizzClubType />,
   who_is_this_player_by_records: <QuizzPlayerByRecords />,
+  who_is_this_player_by_nationality: <QuizzPlayerByNationality />,
 };
 
 /* eslint-enable */
