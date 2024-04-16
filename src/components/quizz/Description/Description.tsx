@@ -9,6 +9,9 @@ import QuizzClubPalmares from './QuizzClubPalmares';
 import QuizzClubType from './QuizzClubType';
 import QuizzPlayerByRecords from './QuizzPlayerByRecords';
 import QuizzPlayerByNationality from './QuizzPlayerByNationality';
+import QuizzPlayerByBirthPlace from './QuizzPlayerByBirthPlace';
+import QuizzPlayerClubByTransfert from './QuizzPlayerClubByTransfert';
+import QuizzStadeByGame from './QuizzStadeByGame';
 /* eslint-disable */
 const QuestionDescrition: any = {
   who_is_this_player_by_teammate: <QuizzPlayerTeammate />,
@@ -21,6 +24,9 @@ const QuestionDescrition: any = {
   who_is_this_club_type: <QuizzClubType />,
   who_is_this_player_by_records: <QuizzPlayerByRecords />,
   who_is_this_player_by_nationality: <QuizzPlayerByNationality />,
+  who_is_this_player_by_birth_place: <QuizzPlayerByBirthPlace />,
+  who_is_this_player_club_by_transfert: <QuizzPlayerClubByTransfert />,
+  who_is_this_stade_by_game: <QuizzStadeByGame />,
 };
 
 /* eslint-enable */

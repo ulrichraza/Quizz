@@ -4,7 +4,7 @@ import { formatPhotosUrl } from '@/utils/Utils';
 import NextImage from 'next/image';
 import { Image } from '@nextui-org/react';
 
-export interface NationalityType {
+export interface BirthPlaceType {
   id: number;
   name: string;
   first_name: string;
@@ -14,14 +14,14 @@ export interface NationalityType {
   photos: string;
 }
 
-export default function QuizzPlayerNationality() {
+export default function QuizzPlayerBirthPlace() {
   const { currentQuizz } = useQuizz();
   return (
     <div className="flex flex-col   w-full justify-center items-center mb-5">
       <div className="w-2/3 flex flex-wrap justify-center gap-4">
         {currentQuizz.quizz_description && (
           <div
-            key={`player-nationality-${currentQuizz.quizz_description?.data?.id}`}
+            key={`player-birth-place-${currentQuizz.quizz_description?.data?.id}`}
             className="text-center"
           >
             <Image
@@ -37,7 +37,7 @@ export default function QuizzPlayerNationality() {
           </div>
         )}
       </div>
-      <h2 className="text-lg my-5">{`Pour quelle équipe nationale ${currentQuizz?.quizz_description?.data?.text} a joué ?`}</h2>
+      <h2 className="text-lg my-5">{`De quelle ville est originaire ${currentQuizz?.quizz_description?.data?.text} ?`}</h2>
     </div>
   );
 }

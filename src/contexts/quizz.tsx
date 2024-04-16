@@ -91,8 +91,8 @@ export default function QuizzProvider({
       const [_, level, clubId, competitionID] = queryKey;
       const params = {
         question_type:
-           'who_is_this_player_by_nationality,who_is_this_player_by_records,who_is_this_club,who_is_this_club_type,who_is_this_player,who_is_this_player_by_palmares,who_is_this_player_by_photos,who_is_this_player_by_teammate,who_is_this_club_by_logo',
-         // Ajout 'who_is_this_player_by_nationality',
+          'who_is_this_player_club_by_transfert,who_is_this_stade_by_game,who_is_this_player_by_birth_place,who_is_this_player_by_nationality,who_is_this_player_by_records,who_is_this_club,who_is_this_club_type,who_is_this_player,who_is_this_player_by_palmares,who_is_this_player_by_photos,who_is_this_player_by_teammate,who_is_this_club_by_logo',
+        // Ajout 'who_is_this_player_club_by_transfert,who_is_this_stade_by_game,who_is_this_player_by_birth_place,who_is_this_player_by_nationality',
         limit: 1,
         is_web: true,
         page: level,
@@ -102,8 +102,7 @@ export default function QuizzProvider({
       };
       const beginTimer = Date.now()
       const data = await fetch(
-        `${
-          process.env.NEXT_PUBLIC_API_BACKEND_HOST
+        `${process.env.NEXT_PUBLIC_API_BACKEND_HOST
         }/api/quizz?${stringifySearchParams({ params })}`,
         {
           cache: 'no-cache',
@@ -168,8 +167,8 @@ export default function QuizzProvider({
               response == item.id && item.id == id
                 ? { ...item, isCorrect: true }
                 : response != item.id && item.id == id
-                ? { ...item, isCorrect: false }
-                : item,
+                  ? { ...item, isCorrect: false }
+                  : item,
           ),
         });
         /*eslint-enable*/

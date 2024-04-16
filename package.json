@@ -30,6 +30,7 @@
     "@react-stately/data": "3.11.0",
     "@uidotdev/usehooks": "2.4.1",
     "@vercel/analytics": "1.1.1",
+    "date-fns": "3.6.0",
     "framer-motion": "10.16.5",
     "lodash": "4.17.21",
     "next": "13.5.4",
