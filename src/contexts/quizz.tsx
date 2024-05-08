@@ -112,7 +112,7 @@ export default function QuizzProvider({
         },
       ).then((result) => result.json());
       setTimer(Date.now() - beginTimer)
-      const random = Math.floor(Math.random() * 24);
+      const random = Math.floor(Math.random() * 13);
 
       if (data.length > 0) {
         const permutationResponse = permuteArray(data[0].quizz_response_choice);
